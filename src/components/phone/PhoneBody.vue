@@ -148,7 +148,7 @@ const showAvatar = (chat) => {
 }
 .phone-body {
   position: absolute;
-  top: 264px;
+  top: 200px;
   bottom: 269px;
   left: 0;
   right: 0;
@@ -190,12 +190,13 @@ const showAvatar = (chat) => {
         flex-direction: column;
       }
       .wechat-item-text {
-        background: #fff;
-        padding: 28px 38px;
+        background: #4DB6AC;
+        color: #FFFFFF;
+        padding: 28px 42px;
         font-size: 48px;
-        border-radius: 15px;
+        border-radius: 40px;
         margin-right: 140px;
-        word-break: break-all;
+        //word-break: break-all;
         margin-left: 160px;
         display: inline-block;
         position: relative;
@@ -207,7 +208,7 @@ const showAvatar = (chat) => {
         }
         &:after {
           content: '';
-          background: #fff;
+          background: #4DB6AC;
           width: 24px;
           height: 24px;
           border-bottom-left-radius: 4px;
@@ -223,7 +224,7 @@ const showAvatar = (chat) => {
           img {
             max-width: 420px;
             max-height: 420px;
-            border-radius: 15px;
+            border-radius: 40px;
             overflow: hidden;
           }
           &:after {
@@ -405,11 +406,12 @@ const showAvatar = (chat) => {
           align-items: end;
         }
         .wechat-item-text {
-          background: #98e970;
+          background: #ffffff;
+          color: #000;
           margin-left: 140px;
           margin-right: 160px;
           &:after {
-            background: #98e970;
+            background: #ffffff;
             left: auto;
             right: -10px;
             border-top-right-radius: 4px;
@@ -539,10 +541,10 @@ const showAvatar = (chat) => {
         }
         &.wechat-item-right {
           .wechat-item-text {
-            background: #3eb575;
+            background: #ffffff;
             color: #000;
             &:after {
-              background: #3eb575;
+              background: #ffffff;
             }
             &.wechat-item-voice {
               i {

@@ -5,7 +5,7 @@
         <div class="phone-wrap" :style="{height: wrapperHeight + 'px'}">
           <div class="phone-scale" :style="{ transform: `scale(${phoneScale})` }">
             <div id="phone" class="phone" :class="{'dark': useSystemStore.appearance.darkMode}" :style="{ width: phoneWidth + 'px', height: phoneHeight + 'px' }">
-              <PhoneBar :appearance="appearance" />
+              <!-- <PhoneBar :appearance="appearance" /> -->
               <PhoneNav :appearance="appearance" />
               <div class="phone-bg">
                 <img :src="useSystemStore.appearance.chatBackground" v-if="useSystemStore.appearance.chatBackground" class="phone-bg-for-height" />
@@ -27,7 +27,7 @@ import { ref, watch } from "vue";
 import useStore from "@/store";
 const { useSystemStore } = useStore();
 import { models } from "@/utils/enum"
-import PhoneBar from "./phone/PhoneBar.vue";
+// import PhoneBar from "./phone/PhoneBar.vue";
 import PhoneNav from "./phone/PhoneNav.vue";
 import PhoneBody from "./phone/PhoneBody.vue";
 import PhoneBottom from "./phone/PhoneBottom.vue";

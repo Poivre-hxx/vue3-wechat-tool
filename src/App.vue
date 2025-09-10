@@ -5,9 +5,9 @@
     },
   }" :locale="zhCN">
     <a-layout @click="handleAppClick" @contextmenu="handleAppContextMenu">
-      <a-layout-header :style="headerStyle">
+      <!-- <a-layout-header :style="headerStyle">
         <WtHeader />
-      </a-layout-header>
+      </a-layout-header> -->
       <a-layout class="content" v-if="!isPhone">
         <!-- <a-layout-sider :style="siderStyle" :width="useSystemStore.activeMenu === 'chat' ? 640 : 480"> -->
         <a-layout-sider :style="siderStyle" :width="640">
@@ -44,7 +44,7 @@ import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 dayjs.locale('zh-cn');
-import WtHeader from "@/components/WtHeader.vue"
+//import WtHeader from "@/components/WtHeader.vue"
 import WtSider from "@/components/WtSider.vue"
 // import WtContent from "@/components/WtContent.vue"
 const WtContent = defineAsyncComponent(() => import('@/components/WtContent.vue'));
@@ -54,13 +54,6 @@ import IsPhone from "@/components/common/IsPhone.vue"
 import useStore from "@/store";
 const { useSystemStore, useUserStore, useChatStore, useContextMenuStore } = useStore();
 import { ownAvatar, otherAvatar } from "@/utils/avatar";
-
-const headerStyle = {
-  height: '50px',
-  lineHeight: '50px',
-  paddingInline: 0,
-  backgroundColor: '#F1F1F1',
-};
 
 const siderStyle = {
   paddingInline: 0,
@@ -90,13 +83,13 @@ onMounted(() => {
     useUserStore.userList = [
       {
         id: "user-0",
-        nickname: "你自己",
+        nickname: "user",
         avatar: ownAvatar,
         role: "own",
       },
       {
         id: "user-" + Date.now(),
-        nickname: "小甜甜",
+        nickname: "Auri",
         avatar: otherAvatar,
         role: "other",
       }
@@ -108,14 +101,14 @@ onMounted(() => {
       {
         id: "chat-1",
         type: "text",
-        content: "你是谁",
+        content: "Who are you?",
         user: useUserStore.userList[0],
         role: "own",
       },
       {
         id: "chat-2",
         type: "text",
-        content: "我是小甜甜~",
+        content: "I'm Auri~",
         user: useUserStore.userList[1],
         role: "other",
       }

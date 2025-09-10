@@ -33,7 +33,7 @@ const chatTitle = computed(() => {
 
 <style lang="less" scoped>
 .phone-nav {
-  height: 132px;
+  height: 160px;
   position: relative;
   z-index: 99999;
   display: flex;
